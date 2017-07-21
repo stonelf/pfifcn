@@ -1,4 +1,4 @@
-﻿<html dir="ltr"><head><link rel="stylesheet" href="http://zesty.ca/pfif/style.css" />
+<html dir="ltr"><head><link rel="stylesheet" href="http://zesty.ca/pfif/style.css" />
 <title>PFIF常见问题和实现指南</title>
 </head>
 
@@ -9,35 +9,35 @@
 
 <p>本文档英文原版由Ka-Ping Yee维护, 中文译文由利 嘉豪主要翻译和维护，特别鸣谢胡 千里。
 可以通过邮箱ping<img src="http://zesty.ca/64.gif" />zesty.ca联系Ka-Ping, 通过lijiahao90 at gmail联系嘉豪。
-<p>许多问题都可以通过查看<a href="http://zesty.ca/pfif/1.1">PFIF说明书</a>
+<p>许多问题都可以通过查看<a href="%E5%AF%BB%E4%BA%BA%E4%BF%A1%E6%81%AF%E4%BA%A4%E6%8D%A2%E6%A0%BC%E5%BC%8F(PFIF)%201.4%20%E8%A7%84%E8%8C%83.html">PFIF说明书</a>
 和<a href="http://zesty.ca/pfif/1.1/pfif-1.1-example.xml">PFIF文档示例</a>找到答案。
 <div class="toc">
 <ul>
-<li><a href="http://zesty.ca/pfif/faq.html#life-cycle">
-</a><a href="http://zesty.ca/pfif/faq.html#life-cycle">一个PFIF记录的生命周期是什么？</a>
-<li><a href="http://zesty.ca/pfif/faq.html#home-repository">
-</a><a href="http://zesty.ca/pfif/faq.html#home-repository">什么是源仓库(home repository)</a>
-<li><a href="http://zesty.ca/pfif/faq.html#changing-fields">
-</a><a href="http://zesty.ca/pfif/faq.html#changing-fields">当一个记录被一个应用传递到另一个应用时，哪些字段发生了改变？</a>
-<li><a href="http://zesty.ca/pfif/faq.html#dates">
-</a><a href="http://zesty.ca/pfif/faq.html#dates"> <span class="field">entry_date</span>
-</a><a href="http://zesty.ca/pfif/faq.html#dates">和<span class="field">source_date</span>有什么区别?</a>
-<li><a href="http://zesty.ca/pfif/faq.html#source-fields">
-</a><a href="http://zesty.ca/pfif/faq.html#source-fields">字段<span class="field">source_name</span>, <span class="field">source_date</span>, 以及<span class="field">source_url</span> 都代表了什么？</a>
-<li><a href="http://zesty.ca/pfif/faq.html#output-format">
-</a><a href="http://zesty.ca/pfif/faq.html#output-format">我应该生成PFIF文档，Atom feed，还是RSS feed作为输出？</a>
-<li><a href="http://zesty.ca/pfif/faq.html#input-format">
-</a><a href="http://zesty.ca/pfif/faq.html#input-format">我应该接受PFIF文档，Atom feed，还是RSS feed作为输入？
+<li><a href="#life-cycle">
+</a><a href="#life-cycle">一个PFIF记录的生命周期是什么？</a>
+<li><a href="#home-repository">
+</a><a href="#home-repository">什么是源仓库(home repository)</a>
+<li><a href="#changing-fields">
+</a><a href="#changing-fields">当一个记录被一个应用传递到另一个应用时，哪些字段发生了改变？</a>
+<li><a href="#dates">
+</a><a href="#dates"> <span class="field">entry_date</span>
+</a><a href="#dates">和<span class="field">source_date</span>有什么区别?</a>
+<li><a href="#source-fields">
+</a><a href="#source-fields">字段<span class="field">source_name</span>, <span class="field">source_date</span>, 以及<span class="field">source_url</span> 都代表了什么？</a>
+<li><a href="#output-format">
+</a><a href="#output-format">我应该生成PFIF文档，Atom feed，还是RSS feed作为输出？</a>
+<li><a href="#input-format">
+</a><a href="#input-format">我应该接受PFIF文档，Atom feed，还是RSS feed作为输入？
 </a>
-<li><a href="http://zesty.ca/pfif/faq.html#other-fields">
-</a><a href="http://zesty.ca/pfif/faq.html#other-fields">对于其他数据库中包含的，但在PFIF格式中不存在的字段该如何处理？</a>
-<li><a href="http://zesty.ca/pfif/faq.html#multiple-records">
-</a><a href="http://zesty.ca/pfif/faq.html#multiple-records">我的应用程序应如何处理对于同一个人的多条记录？</a>
-<li><a href="http://zesty.ca/pfif/faq.html#schema-location">
-</a><a href="http://zesty.ca/pfif/faq.html#schema-location"><code>xmlns:xsi</code>
-</a><a href="http://zesty.ca/pfif/faq.html#schema-location">和<code>xsi:schemaLocation</code>属性是拿来干什么的？</a>
-<li><a href="http://zesty.ca/pfif/faq.html#spec-validation">
-</a><a href="http://zesty.ca/pfif/faq.html#spec-validation">为什么规范文档无法通过W3C验证？</a>
+<li><a href="#other-fields">
+</a><a href="#other-fields">对于其他数据库中包含的，但在PFIF格式中不存在的字段该如何处理？</a>
+<li><a href="#multiple-records">
+</a><a href="#multiple-records">我的应用程序应如何处理对于同一个人的多条记录？</a>
+<li><a href="#schema-location">
+</a><a href="#schema-location"><code>xmlns:xsi</code>
+</a><a href="#schema-location">和<code>xsi:schemaLocation</code>属性是拿来干什么的？</a>
+<li><a href="#spec-validation">
+</a><a href="#spec-validation">为什么规范文档无法通过W3C验证？</a>
 </li></li></li></li></li></li></li></li></li></li></li></ul>
 </div>
 
